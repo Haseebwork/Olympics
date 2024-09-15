@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympics Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    
+</style>
+<body>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+          font-family: Arial;
+          font-size: 17px;
+         
+        }
+        
+        .myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%; 
+          min-height: 100%;
+        }
+        
+        
+        
+        #myBtn {
+          width: 200px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          background: #000;
+          color: #fff;
+          cursor: pointer;
+        }
+        
+        #myBtn:hover {
+          background: #ddd;
+          color: black;
+        }
+        .card_img{
+        overflow: hidden;
+      }
+      .card_img img{
+        transition: all 1s ease;
+      }
+      .card_img:hover img{
+        transform: scale(1.1);
+      }
+      .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+         
+       }
+
+       .search input{
+
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+
+
+       }
+
+
+      
+
+
+       
+
+
+       
+
+       
+
+       /* gallery style */
+
+       
+
+
+      .card_img{
+      box-shadow: 0px 0px 100px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .card_img:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 50px -0px rgb(70, 70, 70);
+      transition: 0.3s;
+    }
+    
+.am{
+  width: 20px;
+  height: px;
+}
+body {
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Additional CSS styles for the rest of the page */
+        .container {
+            /* max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); */
+        }
+        
+        h1 {
+            color: #333;
+        }
+
+
+        #page-header .about-header{
+    background-image: url();
+}
+#about-head img{
+    width: 45%;
+    height: auto;
+    margin-top: 10px;
+}
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head div{
+    padding-left: 40px;
+}
+.card_img{
+  border-radius: 20%;
+  width: 200px;
+  
+}
+
+
+
+
+
+#img-service{
+  box-shadow: 10px 10px 10px 10px lightgrey;
+  height: 650px;
+  margin-top:1%;
+  border-radius:10%;
+  margin-left:5%;
+}
+
+#img-service img{
+  border: none;
+  border-radius: 10%;
+  margin-top:2%;
+}
+
+#img-service-2 img{
+  border: none;
+  border-radius: 10%;
+  margin-left:15%;
+}
+
+#img-service-2{
+  box-shadow: 10px 10px 10px 10px lightgrey;
+  height: 650px;
+  margin-top: 1%;
+  border-radius:10%;
+  margin-left:5%;
+}
+
+
+ #service-btn{
+  margin-top: 5%;
+  height:40px;
+  width: 50%;
+  color: white;
+  background-color: green;
+  border: none;
+  font-weight: bold;
+}
+
+
+
+.service-icon{
+  color: green;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+
+#home{
+      color: white;
+    }
+    #aboutus{
+      color: white;
+    }
+    #contactus{
+      color: white;
+    }
+    #faqs{
+      color: white;
+    }
+    #gallery{
+      color: white;
+    }
+    #olympicsnav{
+      color: white;
+    }
+
+    .footer {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+    }
+    
+      #aboutolympics
+      {
+        color: white;
+      } 
+      #usefullinks{
+        color: rgb(255, 255, 255);
+      }
+      #contactfooter{
+        color: white;
+      }
+      #usefullinks2{
+        color: white;
+      }
+
+      footer{
+      background-size: cover;
+      color: #000;
+      }
+        
+        
+        </style>
+
+        </head>
+        <body>
+        
+       
+        <!-- <header> -->
+          
+       
+         
+    
+       <style>
+        .logo {
+          max-width: 100%;
+          height: auto;
+        }
+        #olympicslogo{
+          width: 500px;
+          height: 130px;
+        }
+      </style> 
+    
+    
+    <header class="bg-light">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <div class="col-12 col-sm-6">
+            <img id="olympicslogo" src=".\images\olympics logo.png" alt="Olympics Logo" class="img-fluid">
+          </div>
+          <div class="col-12 col-sm-6">
+            <h1 class="text-black text-center text-sm-right">Olympics</h1>
+          </div>
+        </div>
+      </div>
+    </header> 
+
+
+
+    <!-- 
+      <div  class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <img id="olympicslogo" src="..\eproject\images\olympics logo.png" class="logo img-fluid" alt="Olympics Logo">
+          </div>
+        </div>
+      </div> -->
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a id="olympicsnav" class="navbar-brand" href="https://olympics.com/" target="blank">OLYMPICS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a id="home" class="nav-link" href="..\e_project\website.html">Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="faqs" class="nav-link" href="..\e_project\homepage\about.html" target="blank">About Us</a>
+            </li>
+
+            <li>
+              <a id="gallery" class="nav-link" href="..\e_project\homepage\gallery.html"  target="blank">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a id="contactus" class="nav-link" href="..\e_project\homepage\contact.html"  target="blank">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a id="faqs" class="nav-link" href="..\e_project\homepage\faq.html" target="blank">Faq's</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    
+    
+     
+    
+
+  
+  <!-- Games Section -->
+  <section id="games" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Games Included in Olympics</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card_img h-100 w-100">
+            <a href="boxing.html"><img src="./wimages/boxing1.png" class="card-img-top" alt="Game 1"></a>
+            <div class="card-body">
+              <h5 class="text-center">BOXING</h5>
+              <!-- <p class="card-text">The Paralympic Games provide a platform for Para athletes with a diverse range of impairments to showcase their outstanding abilities to millions of spectators and billions of TV viewers.</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <a href=" ..\e_project\weightlifting.html"><img src="./wimages/Weightlifting1.png" class="card-img-top" class="img_avatar.png" alt="Game 1"</a>>
+              <div class="card-body">
+                
+                <a href="..\e_project\weightlifting.html"></a><strong><h5 class="text-center">WEIGHT LIFTING</h5></strong>  
+                <!-- <p class="card-text">A sport of the soil and closely connected to Indian culture, kabaddi found global renown after appearing as an exhibition sport just before the 1936 Olympics.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <img src="./wimages/Surfing1.png" class="card-img-top" alt="Game 1">
+              <div class="card-body">
+                <h5 class="text-center">SURFING</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <img src="./wimages/Relayrace.png" class="card-img-top" alt="Game 1">
+              <div class="card-body">
+                <h5 class="text-center">RELAY RACE</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <img src="./wimages/Swiming1.png" class="card-img-top" alt="Game 1">
+              <div class="card-body">
+                <h5 class="text-center">SWIMING</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <img src="./wimages/Table-tenis.png" class="card-img-top" alt="Game 1">
+              <div class="card-body">
+                <h5 class="text-center">TABLE TENIS</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <img src="./wimages/Taekwondo.png" class="card-img-top" alt="Game 1">
+              <div class="card-body">
+                <h5 class="text-center">TAEKWONDO</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <a href="3rd_sports.html"><img src="./wimages/hockey.last.png" class="card-img-top" alt="Game 1"></a>
+              <div class="card-body">
+                <h5 class="text-center">Hockey</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card_img h-100 w-100">
+              <a href="golf.html"><img src="./wimages/golf1.png" class="card-img-top" alt="Game 1"></a>
+              <div class="card-body">
+                <h5 class="text-center">GOLF</h5>
+                <!-- <p class="card-text">Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, ...</p> -->
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          
+
+          
+        <!-- Add more game cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Athletes Section -->
+  <section id="athletes" class="py-5 bg-light">
+    <div class="container">
+      <a href="Atheletes.html"><h2 class="mb-4">Athletes</h2></a>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/Pakistan1.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">KARACHI:
+                Arshad Nadeem landed in England where he will be participating in the Commonwealth Games, Brimingham, beginning from July 28, however he is without his personal coach.
+                
+                “I have landed in the England,” Arshad told The Express Tribune on Monday. He will be going up against Grenada’s Anderson Peters, who has won gold at the recently concluded World Athletics Championships in Eugene, Oregon, while Indian Neeraj Chopra, silver medallist at the event will be missing in action due to injury.
+                
+               </p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/India.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">Indian javelin thrower Neeraj Chopra created history as he became the first athlete from the country to win a gold in track and field in the Olympics.</p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/neeraj.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">Athletics rankings: Neeraj Chopra makes history, becomes World No 1 in men's javelin throw
+                Watch
+                Uploaded: May 23, 2023
+                India's Tokyo Olympics gold medallist Neeraj Chopra on Monday surged to the top of the latest men's javelin throw and is the new World No.1 in the rankings issued by the World Athletics. </p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/jessica.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">Dame Jessica Ennis-Hill[1] DBE OLY (born 28 January 1986[3]) is a retired British track and field athlete from England, specialising in the heptathlon and 100 metres hurdles. As a competitor in heptathlon, she is the 2012 Olympic champion, a three-time world champion (2009, 2011, 2015)</p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/Damian.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">The World’s Greatest Athlete is now Canada’s Athlete of the Year.
+
+                A few months after becoming the first Canadian to win Olympic decathlon gold, Warner has been voted as our country’s best athlete by a distinguished committee of 35 men and women from across the country with diverse backgrounds in sports media.
+                
+                There were so many Team Canada athletes in contention for the year-end honour after their outstanding performances at Tokyo 2020. But what Warner did over his two days of competition this past summer could not be ignored.</p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/Devon1.png" class="card-img-top" alt="Athlete 1">
+            <div class="card-body">
+              <h5 class="card-title">Athlete</h5>
+              <p class="card-text">Devon Allen disqualified for false start at world championships - Los Angeles Times,EXPLAINER: Was Devon Allen too fast for his own good?</p>
+              <a href="readmore.html"><button class="btn btn-primary">readmore</button></a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Add more athlete cards as needed -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- list of atheletes -->
+  
+
+ 
+
+
+
+
+
+
+  <!-- Related News Section -->
+  <section id="news" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Related News</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/related-news1.JPG" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">SURFING NEWS</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/related-news2.JPG" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">ATHLETICS NEWS</h5>
+              <p class="card-text">Rai Benjamin on 400m hurdles world record: ‘It could be a lot faster. I feel I’m the one who could do that’</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/related-news3.JPG" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">BADMINTON NEWS</h5>
+              <p class="card-text">BADMINTON
+                Singapore Open 2023: Loh Kean Yew crashes out in second round at home tournament</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/relatednews4.png" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">BOATING NEWS</h5>
+              <p class="card-text">Shirtless Tongan Pita Taufatofua rising up for the oceans: “There could be a lot of climate refugees, such as myself”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/related-news5.png" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">FEATURES | SNOWBOARDING</h5>
+              <p class="card-text">Su Yiming: Olympic champion on life changes after Beijing and re-finding motivation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img src="./wimages/related-news6.png" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title">SHOOTING NEWS</h5>
+              <p class="card-text">ISSF Junior World Cup 2023 Suhl: Indian medal winners - full tally</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more news cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics and Records Section -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+     
+      <div class="card-body">
+        <h2 class="card-title">stats and record</h2>
+        <a href="..\e_project\STATS.HTML">STATISTICS AND RECORDS</a>
+      </div>
+    </div>
+  </div>
+  
+   
+  
+
+  <!-- Upcoming Event News Section -->
+  <section id="upcoming-events" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Upcoming Event News</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="./images/olympics2.png" class="card-img-top" alt="Event 1">
+            <div class="card-body">
+              <h5 class="card-title">Event 1</h5>
+              <p class="card-text">Olympics.com brings you the full list of World Championships scheduled for 2023 for the sports on the Paris 2024 Olympic Games programme.</p>
+              <h1>List of all World Championships taking place in 2023</h1>
+            </div>
+          </div>
+        </div>
+        <!-- Add more event cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- History of Previous Events Section -->
+  
+
+
+          
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div id="aboutolympics" class="col-md-4">
+          <h5>Explore More</h5>
+          <!-- <p>Our Helpful Pages</p> -->
+          <ul class="list-unstyled">
+            <li><a href="https://www.instagram.com/" target="newtab">INSTAGRAM</li>
+            <li><a href="https://www.facebook.com/" target="newtab">FACEBOOK</a></li>
+            <li><a href="https://www.youtube.com/" target="newtab">YOUTUBE</a></li>
+            <li><a href="https://twitter.com/" target="newtab">TWITTER</a></li>
+          </ul>
+        </div>
+        <div id="usefullinks" class="col-md-4">
+          <h5>Useful Links</h5>
+          <ul  class="list-unstyled">
+            <li><a href="..\e_project\homepage\about.html" target="newtab">About Us</a></li>
+            <li><a href="..\e_project\homepage\contact.html" target="newtab">Contact Us</a></li>
+            <li><a href="..\e_project\homepage\gallery.html" target="newtab">Gallery</a></li>
+            <li><a href="..\e_project\homepage\faq.html" target="newtab">Faq's</a></li>
+          </ul>
+        </div>
+        <div id="contactfooter" class="col-md-4">
+          <h5>Contact Us</h5>
+          <p><a href="https://mail.google.com/" target="newtab">Email: mk0293143@gmail.com</a></p>
+          <p><a href="https://mail.google.com/" target="newtab">Email: haseebahmedaptech@gmail.com</a></p>
+          <p>Phone: +92 3323956151</p>
+          <p>Phone: +92 3137436766</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap 5 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </div>
+  <script>
+  //jquery coding
+
+$(document).ready(function(){
+
+$('#search').click(function(){
+
+  var checker = 0;
+  for (var i = 0; i < 12; i++) {
+    var card = $("div").filter(".col-md-6")[i];
+    var title = $("h5").filter(".card-title")[i].innerText.toUpperCase();
+
+    if (title.indexOf($("#inp").val().toUpperCase()) > -1) {
+      card.style.display = 'block';
+      checker++;
+    }
+    else{
+      card.style.display = 'none';
+    }
+  }
+
+if (checker > 0) {
+$("#not_find_any_thing").text("");
+
+}
+else {
+$("#not_find_any_thing").text("No Result Found").fadeIn();
+}
+
+
+});
+});
+
+
+// this video is part 2 
+
+ // jquery for add to cart
+
+
+$(document).ready(function(){
+
+$("#cart").hide();
+
+$(".fa-shopping-cart").mouseenter(function(){
+$('#cart').show();
+})
+
+$("#cart").mouseleave(function(){
+$("#cart").hide();
+})
+
+
+var cart_item_count = 0;
+$('.cart_btn').click(function(){
+cart_item_count++;
+var img_src = $(this).parents(".card-body").siblings("img").attr("src");
+var titlte = $(this).parents(".d-flex").siblings(".d-flex").find(".card-title").text();
+var price = $(this).parents(".d-flex").siblings(".d-flex").find("span:nth-child(2)").text();
+
+
+var cart_item =  `
+ 
+ <div class=" main d-flex p-3 border border-left-0 border-right-0 border-top-0">
+  <div class="col-md-3 border border-left-0 border-top-0 border-bottom-0">
+  <img src=${img_src} class="w-100" alt=""/>
+  </div>
+
+  <div id="title" class="col-md-3 d-flex flex-wrap align-content-center">
+     <h6 style="font-size:13px;">${titlte}</h6>
+  </div>
+
+  <div class="col-md-3 d-flex flex-wrap align-content-center">
+  <span class="mx-2"> 1 </span>
+  </div>
+
+  <div class="col-md-2 d-flex flex-wrap align-content-center" id="t_price">
+    <h6 class="mt-2 d-flex"><span> $ </span><span class="cart_item_price"> ${price} </span></h6>
+  </div>
+
+  <div class="col-md-1 d-flex flex-wrap align-content-center">
+  <span class="close" style="cursor:pointer;font-size:25px;">&times;</span>
+  </div>
+
+ </div>
+
+`
+ 
+ $("#order").append(cart_item);
+
+ $("#cart_item_count").text(cart_item_count);
+ $(".close").click(function(){
+  $(this).parents(".main").remove();
+
+  item_count();
+ })
+ item_count();
+})
+function item_count(){
+
+var res = $("#order").children().length;
+$("#cart_item_count").text(res);
+}
+
+})
+
+</script>
+
+  </script>
+</body>
+</html>
+

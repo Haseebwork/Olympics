@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympics Website</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h2 id="asd">Olympics Hockey players players</h2>
+    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search images">
+    <div class="row" id="imageGallery">
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockeyplayer4.html"><img src="./images/hama.png" alt="Image 1" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">David Warsofsky</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockey about.html"><img src="./images/player2.png" alt="Image 2" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">Andy Miele</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+         <a href="hockeyplayer3.html"><img src="./images/player3.png" alt="Image 3" class="card-img-top"></a> 
+          <div class="card-body">
+            <h5 class="card-title">Derek Roy
+            </h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockeyplayer5.html"><img src="./images/coach.png" alt="Image 3" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">Shahnaz Sheikh</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockeyplayer2.html"><img src="./images/haro.png" alt="Image 3" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">Hanif Khan</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockeyplayer6.html"><img src="./images/hamareboss.png" alt="Image 3" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">Naseer Bunda</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+          <a href="hockeyplayer7.html"><img src="./images/india1.png" alt="Image 3" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-title">Birendra Lakra</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-5">
+        <div class="card_img h-100">
+         <a href="hockeyplayer8.html"><img src="./images/india2.png" alt="Image 3" class="card-img-top"></a> 
+          <div class="card-body">
+            <h5 class="card-title">Manpreet Singh</h5>
+           
+          </div>
+        </div>
+      </div>
+     <a href="website.html"><button class="btn btn-primary">GO BACK</button></a> 
+     
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.getElementsByClassName('card_img');
+
+    searchInput.addEventListener('input', function () {
+      const searchQuery = this.value.toLowerCase();
+
+      for (let i = 0; i < cards.length; i++) {
+        const cardTitle = cards[i].getElementsByClassName('card-title')[0].innerText.toLowerCase();
+        if (cardTitle.includes(searchQuery)) {
+          cards[i].style.display = 'block';
+        } else {
+          cards[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

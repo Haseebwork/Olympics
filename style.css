@@ -1,0 +1,59 @@
+body{
+  background: linear-gradient(0,0,0,0.6);
+  background-color: rgb(231, 231, 231);
+}
+/* Custom CSS */
+
+/* Image Gallery */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+#asd{
+    text-align: center;
+}
+
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.card_img{
+    overflow: hidden;
+  }
+  .card_img img{
+    transition: all 1.3s ease;
+  }
+  .card_img:hover img{
+    transform: scale(1.2);
+  }
+  /* .card_img{
+    border: solid;
+  } */
+/* text color change */
+.card-title{
+color: rgb(0, 0, 0);
+}
+.card-text{
+color: rgb(0, 0, 0);
+}
+
+
+
+  .card_img {
+  box-shadow: 0px 0px 100px -10px rgba(0, 0, 0, 0.75);
+}
+
+.card_img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 50px -0px rgb(0, 0, 0);
+  transition: 0.3s;
+}
+.card_img{
+border-radius: 180rem;
+}
+.card-title{
+text-align: center;
+}

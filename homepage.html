@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* #hero{
+    background-image: url(../wimages\homepage.png);
+    height: 70vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+} */
+/* #hero h4{
+    padding-bottom: 15px;
+}
+#hero h1{
+    color: #088178;
+}
+.card{
+    width: 100px;
+} */
+
+
+
+.mySlides {display:none;}
+
+
+    .w3-content w3-section{
+      height: 70vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+
+.loader2{
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  #loader2{
+    background:  url(wimages/loader.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    z-index: 100;
+  }
+  
+  #home{
+      color: white;
+    }
+    #aboutus{
+      color: white;
+    }
+    #contactus{
+      color: white;
+    }
+    #faqs{
+      color: white;
+    }
+    #gallery{
+      color: white;
+    }
+    #olympicsnav{
+      color: white;
+    }
+
+  .logo {
+      max-width: 100%;
+      height: auto;
+    }
+    #olympicslogo{
+      width: 500px;
+      height: 130px;
+    }
+
+
+    /* .carousel-item {
+      height: 500px; /* Adjust the desired height */
+    /* } */
+
+    /* .carousel-inner {
+      width: 800px; /* Adjust the desired width */
+      /* margin: 0 auto; */ 
+    /* } */
+
+    /* .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%; */
+    /* } */
+    
+
+
+/* #glow{
+  font-size: 23px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate; */
+/* } */
+
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #e60073, 0 0 9px #e60073, 0 0 11px #e60073, 0 0 14px #e60073, 0 0 16px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 4px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6, 0 0 9px #ff4da6, 0 0 10px #ff4da6;
+  } */
+/* }  */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+    </style>
+    
+</head>
+<body>
+
+
+
+  <header style="background-color: rgb(100, 100, 100);" class="">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-6">
+          <img id="olympicslogo" src="./images2/olympicslogo.png.png" alt="Olympics Logo" class="img-fluid">
+        </div>
+        <div class="col-12 col-sm-6">
+          <h1 class="text-black text-center text-sm-right"></h1>
+        </div>
+      </div>
+    </div>
+  </header> 
+
+
+
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Slider -->
+  <!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <!-- <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol> --> 
+  
+    <!-- Slides -->
+    <!-- <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./wimages/olympicslidder2.png" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./wimages/olympicsslider.png" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./wimages/slider3.png" alt="Image 3">
+      </div>
+    </div> -->
+  
+    <!-- Controls -->
+    <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div> -->
+
+
+ 
+   
+
+
+
+
+
+
+<!-- banner section start -->
+<section id="hero">
+    <h4>Tokyo 2024</h4>
+    <h2>Tokyo 2023</h2>
+    <h1>Tokyo 2020</h1>
+    <p>BE the Champion!</p>
+    <button>Buy Tickets</button>
+</section>
+<!-- feature section start  -->
+
+
+
+<!-- <div class="w3-content w3-section" style="max-width: 70%">
+  <img class="mySlides" src="..\e_project\wimages\olympicsslider.png" style="width:100%" height="70%">
+  <img class="mySlides" src="..\e_project\wimages\olympicslidder2.png" style="width:100%" height="70%">
+  <img class="mySlides" src="..\e_project\wimages\slider3.png" style="width:100%" height="70%">
+</div> -->
+
+
+
+
+
+<!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="..\e_project\wimages\olympicsslider.png" class="d-block w-" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="..\e_project\wimages\olympicslidder2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..\e_project\wimages\slider3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+<script>
+//     var myCarousel = document.querySelector('#myCarousel')
+// var carousel = new bootstrap.Carousel(myCarousel)
+
+
+// var myIndex = 0;
+// carousel();
+
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}    
+//   x[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 2000); // Change image every 2 seconds
+
+</script>
+
+<!-- <iframe width="560" height="315" src="124332434" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="124334" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="1243434" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="12334343" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="12433" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="1233543533434" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="134343432432" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="14343432" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="1334342" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="233434" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- my lora work -->
+
+      <div class="container mt-5">
+       
+        <div class="row" id="imageGallery">
+          <div class="col-md-2.5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/weightlifting.png" alt="Image 1" class="card-img-top">
+              <div class="card-body">
+              <a href=""><h6 class="text-center">David Warsofsky</h6></a>  
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2.5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/waterpolo.png" alt="Image 2" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2.5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/volyleyball.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/artistic.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/athelits.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/badminton.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/baseball.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/basket.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/cyclingbmx.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/cyclingmbike.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/cyclingtrack.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/cyclingroad.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/diving.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/eqestrianevening.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/equestriandress.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/equestrianjump.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/fencing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/football.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/golf.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/handball.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/hockey.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/judo.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/karatekata.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/karatekumite.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/shooting.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/skateboarding.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/sportclimbing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/surfing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/swiming.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/tabletennis.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/takwondo.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/tenis.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/trampoline.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/triathlon.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/wrestling.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/boxing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/softball.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/rugby.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/rowing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/rytmicgymnastcs.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/modernpetathlon.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/marathonswiming.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/shiprace.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/shipboat.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/sailing.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/artisticswiming.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/arrowbow.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/beachvolly.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/handball.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-5">
+            <div class="card h-100">
+              <img src="./wimages/cyclingmbike.png" alt="Image 3" class="card-img-top">
+              <div class="card-body">
+                <a href=""><h6 class="text-center">David Warsofsky</h6></a> 
+                
+              </div>
+            </div>
+          </div>
+         <a href="homepage.html"><button class="btn btn-primary">GO BACK</button></a> 
+         
+        </div>
+      </div>
+
+
+    
+<!-- <section id="news-letter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        <div class="form">
+            <input type="text" placeholder="Your E-mail Address">
+            <button class="normal">Sign Up</button>
+        </div>
+
+    </div>
+</section> 
+
+
+<!-- <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <!-- <li><a href="#">Blog</a></li> 
+                        <!-- <li><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="#">Birthday Cards</a></li>
+                        <li><a href="#">Womens Day Card</a></li>
+                        <li><a href="#">Mothers Day Card</a></li>
+                        <li><a href="#">Wedding Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/login" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+  
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./app.js"></script>
+    <script>
+      var loader = document.getElementById('loader2');
+      window.addEventListener('load',function(){
+        loader.style.display = "none"
+      })
+      var myCarousel = document.getElementById('myCarousel');
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 2000, // Change slide every 2 seconds
+      wrap: true // Cycle back to the first slide after the last one
+    });
+    </script>
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+    </script>
+</body>
+</html>
